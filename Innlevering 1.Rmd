@@ -1,10 +1,11 @@
 ---
 title: "R Notebook"
 output:
+  pdf_document: default
+  html_notebook: default
   html_document:
     df_print: paged
-  html_notebook: default
-  pdf_document: default
+  word_document: default
 ---
 
 # Header 1 (minst 4 overskrifter)
@@ -15,38 +16,3 @@ output:
 
 ### Ordnet liste (minst 1):
 
-1.  Første
-
-    -   hei
-
-2.  Andre
-
--   hei
-
-Minst et eksempel på bruk av følgende: *italic* **bold** ***italicbold***
-
-# Reproduserbarhet
-
-I 2015 oppstod det en replikasjonskrise. Dette startet innenfor psykologien, hvor 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. De klarte kun å få samme resultat i under halvparten av studiene, og dette var selv med hjelp fra forskerne som stod bak disse studiene (<https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>). I ettertid har det blitt større fokus på replikerbarhet og reproduserbarhet innenfor forskning. Replikerbarhet er et krav for reproduserbarhet, og i denne oppgaven skal jeg ta for meg reproduserbarhet og om bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar.
-
-## Litteraturgjennomgang
-
-Replikerbarhet/reproduserbarhet Det er enda ingen allmenn akseptert definisjon av "reproduserbarhet" og "replikerbarhet". Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil jeg skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: "reproduserbarhet" oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. "Replikerbarhet" oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved "replikerbarhet" så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er et krav for å kunne oppnå replikerbarhet.
-
-### Problemets omfang 
-
-### Vil dagens løsning med ariv av data og eventuel programkode hos tidsskriftene kunne løse problemet?
-
-### Mulig løsning (teoretisk plan) "Compendium", "Dynamic document", "code chuncks" og "text chunck"
-
-### Mulig løsning R Notebooks
-
-## Analyse
-
-Løser R Notebooks problemet med reproduserbarhet? Helt eller bare delvis? Eksempler på "Code chuncks" ("R Code Block") og "text chunck i R notebook Har forskerne incentiver til å være "reproduserbare", eller må de tvinges? Er økt reproduserbarhet noe som vil tvinge seg frem eller er dagens økte interesse bare et blaff? Kan reproduserbarhet ha relevans i sektorer utenfor akademia?
-
-## Konklusjon
-
-## Litteraturliste
-
-Kilder: <https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>) <https://rpubs.com/marschmi/105639>
