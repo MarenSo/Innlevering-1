@@ -215,21 +215,74 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<div id="header-1-minst-4-overskrifter" class="section level1">
-<h1>Header 1 (minst 4 overskrifter)</h1>
-<div id="header-2" class="section level2">
-<h2>Header 2</h2>
-<div id="header-3" class="section level3">
-<h3>Header 3</h3>
+<p>Minst et eksempel på bruk av følgende: <em>italic</em> <strong>bold</strong> <strong><em>italicbold</em></strong></p>
+<div id="reproduserbarhet" class="section level1">
+<h1>Reproduserbarhet</h1>
+<p>I 20xx (finn ut) oppstod det en replikasjonskrise. Denne startet innenfor psykologien, og ble for alvor offentlig kjent i 2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. De klarte kun å få samme resultat i under halvparten av studiene, og dette var selv med hjelp fra forskerne som stod bak disse studiene (<a href="https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen" class="uri">https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen</a>). Det har senere vist seg at disse replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har det blitt større fokus på reproduserbarhet innenfor forskning. Reproduserbarhet er en forutsetning for replikerbarhet, så denne oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar, og dermed mer pålitelig.</p>
+<div id="litteraturgjennomgang" class="section level2">
+<h2>Litteraturgjennomgang</h2>
+<p>Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av “reproduserbarhet” og “replikerbarhet”. Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: “reproduserbarhet” oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. “Replikerbarhet” oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved “replikerbarhet” så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er et krav for å kunne oppnå replikerbarhet.</p>
+<div id="problemets-omfang" class="section level3">
+<h3>Problemets omfang</h3>
+<p>I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel</p>
 </div>
-<div id="ordnet-liste-minst-1" class="section level3">
-<h3>Ordnet liste (minst 1):</h3>
+<div id="vil-dagens-løsning-med-arkiv-av-data-og-eventuell-programkode-hos-tidsskriftene-kunne-løse-problemet" class="section level3">
+<h3>Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?</h3>
+</div>
+<div id="mulig-løsning-teoretisk-plan-compendium-dynamic-document-code-chuncks-og-text-chunck" class="section level3">
+<h3>Mulig løsning (teoretisk plan) “Compendium”, “Dynamic document”, “code chuncks” og “text chunck”</h3>
+<p>Compendium:</p>
+<p>Dynamic document: <a href="https://www.igi-global.com/dictionary/dynamic-reconstruction-concept-maps/8490" class="uri">https://www.igi-global.com/dictionary/dynamic-reconstruction-concept-maps/8490</a> Et dokument som er ikke-permanent. Det er ikke ment å brukes til arkivering, men for å formidle informasjon. Digitalt dokument, det genereres av automatisert programvare som samler informasjon fra en database og deretter settet den inn i en forhåndsinnstilt mal.</p>
+<p>Code chuncks: <a href="https://rmarkdown.rstudio.com/lesson-3.html" class="uri">https://rmarkdown.rstudio.com/lesson-3.html</a> R notebook lar oss ha “code chunks” i teksten.</p>
+<p>Text chunck: Tekstbolker i dokumentet (R Notebook/Markdown)</p>
+</div>
+<div id="mulig-løsning-r-notebooks" class="section level3">
+<h3>Mulig løsning R Notebooks</h3>
+<p>Daniel skrevet</p>
+</div>
+</div>
+<div id="analyse" class="section level2">
+<h2>Analyse</h2>
+<p>Løser R Notebooks problemet med reproduserbarhet? Helt eller bare delvis?</p>
+<p>Eksempler på “Code chuncks” (“R Code Block”) og &quot;text chunck i R notebook.</p>
+<p>Har forskerne incentiver til å være “reproduserbare”, eller må de tvinges?</p>
+<p>I følge Florian Markowetz (20xx) er det følgende fem egoistiske hovedgrunner til at forskerne selv burde ønske å publisere reproduserbar forskning:</p>
+<ol style="list-style-type: decimal">
+<li><p>Man unngår katastrofer</p>
+<ul>
+<li>blabla</li>
+</ul></li>
+<li><p>Det er lettere å skrive artikler</p>
+<ul>
+<li>blabla</li>
+</ul></li>
+<li><p>Lettere for fagfeller å forstå tankegangen</p>
+<ul>
+<li>blabla</li>
+</ul></li>
+<li><p>Det muliggjør kontinuitet i arbeidet</p>
+<ul>
+<li>Det vil for eksempel ikke være noen krise dersom forskeren har glemt fremgangsmåten vedkommende brukte i forskningen sin i fjor. Det vil være muligheter for å kunne se hvordan man har tenkt og jobbet med studiet.</li>
+</ul></li>
+<li><p>Hjelper deg å opparbeide et godt rykte</p>
+<ul>
+<li>Andre vil se på en forsker som publiserer reproduserbarforskning som en troverdig og grundig forsker, og dersom det noen gang blir problemer med noe av arbeidet, vil det være enkelt å vise og forklare hvordan man har tenkt og jobbet.</li>
+</ul></li>
+</ol>
+<p>Er økt reproduserbarhet noe som vil tvinge seg frem eller er dagens økte interesse bare et blaff? Kan reproduserbarhet ha relevans i sektorer utenfor akademia?</p>
+</div>
+<div id="konklusjon" class="section level2">
+<h2>Konklusjon</h2>
+</div>
+<div id="litteraturliste" class="section level2">
+<h2>Litteraturliste</h2>
+<p>Sætrevik, B. (2017). Replikasjonskrisen. <em>Psykologtidsskriftet.</em> <a href="https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen" class="uri">https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen</a></p>
+<p>Schmidt, M. L. 2015. Reproducible Research Using RMarkdown and Git through Rstudio. <em>RPubs by Rstudio.</em> <a href="https://rpubs.com/marschmi/105639" class="uri">https://rpubs.com/marschmi/105639</a></p>
 <!-- rnb-text-end -->
 </div>
 </div>
-</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6DQogIHBkZl9kb2N1bWVudDogZGVmYXVsdA0KICBodG1sX25vdGVib29rOiBkZWZhdWx0DQogIGh0bWxfZG9jdW1lbnQ6DQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogIHdvcmRfZG9jdW1lbnQ6IGRlZmF1bHQNCi0tLQ0KDQojIEhlYWRlciAxIChtaW5zdCA0IG92ZXJza3JpZnRlcikNCg0KIyMgSGVhZGVyIDINCg0KIyMjIEhlYWRlciAzDQoNCiMjIyBPcmRuZXQgbGlzdGUgKG1pbnN0IDEpOg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6DQogIHdvcmRfZG9jdW1lbnQ6IGRlZmF1bHQNCiAgaHRtbF9ub3RlYm9vazogZGVmYXVsdA0KICBwZGZfZG9jdW1lbnQ6IGRlZmF1bHQNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBkZl9wcmludDogcGFnZWQNCi0tLQ0KDQpNaW5zdCBldCBla3NlbXBlbCBww6UgYnJ1ayBhdiBmw7hsZ2VuZGU6ICppdGFsaWMqICoqYm9sZCoqICoqKml0YWxpY2JvbGQqKioNCg0KIyBSZXByb2R1c2VyYmFyaGV0DQoNCkkgMjB4eCAoZmlubiB1dCkgb3Bwc3RvZCBkZXQgZW4gcmVwbGlrYXNqb25za3Jpc2UuIERlbm5lIHN0YXJ0ZXQgaW5uZW5mb3IgcHN5a29sb2dpZW4sIG9nIGJsZSBmb3IgYWx2b3Igb2ZmZW50bGlnIGtqZW50IGkgMjAxNSBkYSAyNzAgZm9yc2tlcmUgc2FtYXJiZWlkZXQgb20gw6UgZm9yc8O4a2Ugw6UgcmVwbGlrZXJlIDEwMCBzdHVkaWVyIHNvbSBhbGxlIHZhciBwdWJsaXNlcnQgaSBsZWRlbmRlIHRpZHNza3JpZnRlciBpbm5lbmZvciBmYWdmZWx0ZXQuIERlIGtsYXJ0ZSBrdW4gw6UgZsOlIHNhbW1lIHJlc3VsdGF0IGkgdW5kZXIgaGFsdnBhcnRlbiBhdiBzdHVkaWVuZSwgb2cgZGV0dGUgdmFyIHNlbHYgbWVkIGhqZWxwIGZyYSBmb3Jza2VybmUgc29tIHN0b2QgYmFrIGRpc3NlIHN0dWRpZW5lICg8aHR0cHM6Ly9wc3lrb2xvZ3RpZHNza3JpZnRldC5uby9mYWdlc3NheS8yMDE3LzA3L3JlcGxpa2Fzam9uc2tyaXNlbj4pLiBEZXQgaGFyIHNlbmVyZSB2aXN0IHNlZyBhdCBkaXNzZSByZXBsaWthc2pvbnNwcm9ibGVtZW5lIGZpbm5lcyBpbm5lbmZvciBmbGVyZSBmYWdmZWx0LCBvZyBpIGV0dGVydGlkIGhhciBkZXQgYmxpdHQgc3TDuHJyZSBmb2t1cyBww6UgcmVwcm9kdXNlcmJhcmhldCBpbm5lbmZvciBmb3Jza25pbmcuIFJlcHJvZHVzZXJiYXJoZXQgZXIgZW4gZm9ydXRzZXRuaW5nIGZvciByZXBsaWtlcmJhcmhldCwgc8OlIGRlbm5lIG9wcGdhdmVuIHNrYWwgdmkgdGEgZm9yIG9zcyByZXByb2R1c2VyYmFyaGV0IG9nIGh2b3J2aWR0IGJydWsgYXYgUiBvZyBSIG5vdGVib29rcyBrYW4gdsOmcmUgZW4gbXVsaWcgbMO4c25pbmcgZm9yIMOlIGdqw7hyZSBmb3Jza25pbmcgcmVwcm9kdXNlcmJhciwgb2cgZGVybWVkIG1lciBww6VsaXRlbGlnLg0KDQojIyBMaXR0ZXJhdHVyZ2plbm5vbWdhbmcNCg0KUmVwbGlrZXJiYXJoZXQvcmVwcm9kdXNlcmJhcmhldCBEZXQgZXIgZW5kYSBpbmdlbiBhbGxtZW5uIGRlZmluaXNqb24gYXYgInJlcHJvZHVzZXJiYXJoZXQiIG9nICJyZXBsaWtlcmJhcmhldCIuIE5vZW4gYnJ1a2VyIGRpc3NlIGJlZ3JlcGVuZSBvbSBodmVyYW5kcmUgKEJvbGxlbiBldCBhbC4sIDIwMTUpLCBvZyBhbmRyZSBlciBuw7h5ZSBtZWQgw6Ugc2tpbGxlIGRlbSBmcmEgaHZlcmFuZHJlIChMZWVrIGFuZCBQZW5nLCAyMDE1OiBHb29kbWFuIGV0IGFsLiwgMjAxNikuIEkgZGVubmUgb3BwZ2F2ZW4gdmlsIHZpIHNraWxsZSBiZWdyZXBlbmUgdHlkZWxpZyBmcmEgaHZlcmFuZHJlIG9nIGJydWtlIEJvbGxlbnMgKGV0IGFsLiwgMjAxNSkgZGVmaW5pc2pvbmVyIGF2IGJlZ3JlcGVuZTogInJlcHJvZHVzZXJiYXJoZXQiIG9wcHN0w6VyIGRlcnNvbSBmb3Jza2VyZSBrbGFyZXIgw6Uga29tbWUgZnJlbSB0aWwgc2FtbWUgcmVzdWx0YXQgdmVkIMOlIGJydWtlIHNhbW1lIHByb3NlZHlyZSBvZyBzYW1tZSBkYXRhc2V0dCBzb20gZ2pvcnQgdmVkIGRldCBvcHByaW5uZWxpZ2Ugc3R1ZGlldC4gIlJlcGxpa2VyYmFyaGV0IiBvcHBzdMOlciBkZXJzb20gZm9yc2tlcmUga2xhcmVyIMOlIGtvbW1lIGZyZW0gdGlsIHNhbW1lIHJlc3VsdGF0ZXQgdmVkIMOlIGJydWtlIHNhbW1lIHByb3NlZHlyZSBvZyBldCBueXR0IGRhdGFzZXR0LiBIb3ZlZGZvcnNramVsbGVuIGVyIGFsdHPDpSBhdCB2ZWQgInJlcGxpa2VyYmFyaGV0IiBzw6Ugc2thbCBkZXQgaGVudGVzIGlubiBueWUgZGF0YSwgbWVuIHJlc3VsdGF0ZXQgc2thbCBsaWtldmVsIGJsaSBkZXQgc2FtbWUuIERlIHNvbSBwcsO4dmVyIMOlIHJlcGxpa2VyZSBlbGxlciByZXByb2R1c2VyZSBzdHVkaWV0IG3DpSBhbHRzw6UgaGEgdGlsZ2FuZyB0aWwgYWx0IGF2IGRhdGEsIGtpbGRla29kZSBvZyBwcm9zZWR5cmVkZXRhbGplci4gTWFuIGthbiBkZXJtZWQgc2kgYXQgcmVwcm9kdXNlcmJhcmhldCBlciBldCBrcmF2IGZvciDDpSBrdW5uZSBvcHBuw6UgcmVwbGlrZXJiYXJoZXQuDQoNCiMjIyBQcm9ibGVtZXRzIG9tZmFuZw0KDQpJIGx5cyBhdiByZXBsaWthc2pvbnNrcmlzZW4gb2cgZGV0IMO4a3RlIGZva3VzZXQgcMOlIHJlcGxpa2Fzam9uLCBoYXIgZmxlcmUgdGlkc3NrcmlmdGVyIGJlZ3ludCDDpSBwdWJsaXNlcmUgdGlsaMO4cmVuZGUgZGF0YXNldHQgc2FtbWVuIG1lZCBhcnRpa2xlbmUuIGZlcmRpZyBhdiBEYW5pZWwNCg0KIyMjIFZpbCBkYWdlbnMgbMO4c25pbmcgbWVkIGFya2l2IGF2IGRhdGEgb2cgZXZlbnR1ZWxsIHByb2dyYW1rb2RlIGhvcyB0aWRzc2tyaWZ0ZW5lIGt1bm5lIGzDuHNlIHByb2JsZW1ldD8NCg0KIyMjIE11bGlnIGzDuHNuaW5nICh0ZW9yZXRpc2sgcGxhbikgIkNvbXBlbmRpdW0iLCAiRHluYW1pYyBkb2N1bWVudCIsICJjb2RlIGNodW5ja3MiIG9nICJ0ZXh0IGNodW5jayINCg0KQ29tcGVuZGl1bToNCg0KRHluYW1pYyBkb2N1bWVudDogPGh0dHBzOi8vd3d3LmlnaS1nbG9iYWwuY29tL2RpY3Rpb25hcnkvZHluYW1pYy1yZWNvbnN0cnVjdGlvbi1jb25jZXB0LW1hcHMvODQ5MD4gRXQgZG9rdW1lbnQgc29tIGVyIGlra2UtcGVybWFuZW50LiBEZXQgZXIgaWtrZSBtZW50IMOlIGJydWtlcyB0aWwgYXJraXZlcmluZywgbWVuIGZvciDDpSBmb3JtaWRsZSBpbmZvcm1hc2pvbi4gRGlnaXRhbHQgZG9rdW1lbnQsIGRldCBnZW5lcmVyZXMgYXYgYXV0b21hdGlzZXJ0IHByb2dyYW12YXJlIHNvbSBzYW1sZXIgaW5mb3JtYXNqb24gZnJhIGVuIGRhdGFiYXNlIG9nIGRlcmV0dGVyIHNldHRldCBkZW4gaW5uIGkgZW4gZm9yaMOlbmRzaW5uc3RpbHQgbWFsLg0KDQpDb2RlIGNodW5ja3M6IDxodHRwczovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbS9sZXNzb24tMy5odG1sPiBSIG5vdGVib29rIGxhciBvc3MgaGEgImNvZGUgY2h1bmtzIiBpIHRla3N0ZW4uDQoNClRleHQgY2h1bmNrOiBUZWtzdGJvbGtlciBpIGRva3VtZW50ZXQgKFIgTm90ZWJvb2svTWFya2Rvd24pDQoNCiMjIyBNdWxpZyBsw7hzbmluZyBSIE5vdGVib29rcw0KDQpEYW5pZWwgc2tyZXZldA0KDQojIyBBbmFseXNlDQoNCkzDuHNlciBSIE5vdGVib29rcyBwcm9ibGVtZXQgbWVkIHJlcHJvZHVzZXJiYXJoZXQ/IEhlbHQgZWxsZXIgYmFyZSBkZWx2aXM/DQoNCkVrc2VtcGxlciBww6UgIkNvZGUgY2h1bmNrcyIgKCJSIENvZGUgQmxvY2siKSBvZyAidGV4dCBjaHVuY2sgaSBSIG5vdGVib29rLg0KDQpIYXIgZm9yc2tlcm5lIGluY2VudGl2ZXIgdGlsIMOlIHbDpnJlICJyZXByb2R1c2VyYmFyZSIsIGVsbGVyIG3DpSBkZSB0dmluZ2VzPw0KDQpJIGbDuGxnZSBGbG9yaWFuIE1hcmtvd2V0eiAoMjB4eCkgZXIgZGV0IGbDuGxnZW5kZSBmZW0gZWdvaXN0aXNrZSBob3ZlZGdydW5uZXIgdGlsIGF0IGZvcnNrZXJuZSBzZWx2IGJ1cmRlIMO4bnNrZSDDpSBwdWJsaXNlcmUgcmVwcm9kdXNlcmJhciBmb3Jza25pbmc6DQoNCjEuICBNYW4gdW5uZ8OlciBrYXRhc3Ryb2Zlcg0KDQogICAgLSAgIGJsYWJsYQ0KDQoyLiAgRGV0IGVyIGxldHRlcmUgw6Ugc2tyaXZlIGFydGlrbGVyDQoNCiAgICAtICAgYmxhYmxhDQoNCjMuICBMZXR0ZXJlIGZvciBmYWdmZWxsZXIgw6UgZm9yc3TDpSB0YW5rZWdhbmdlbg0KDQogICAgLSAgIGJsYWJsYQ0KDQo0LiAgRGV0IG11bGlnZ2rDuHIga29udGludWl0ZXQgaSBhcmJlaWRldA0KDQogICAgLSAgIERldCB2aWwgZm9yIGVrc2VtcGVsIGlra2UgdsOmcmUgbm9lbiBrcmlzZSBkZXJzb20gZm9yc2tlcmVuIGhhciBnbGVtdCBmcmVtZ2FuZ3Ntw6V0ZW4gdmVka29tbWVuZGUgYnJ1a3RlIGkgZm9yc2tuaW5nZW4gc2luIGkgZmpvci4gRGV0IHZpbCB2w6ZyZSBtdWxpZ2hldGVyIGZvciDDpSBrdW5uZSBzZSBodm9yZGFuIG1hbiBoYXIgdGVua3Qgb2cgam9iYmV0IG1lZCBzdHVkaWV0Lg0KDQo1LiAgSGplbHBlciBkZWcgw6Ugb3BwYXJiZWlkZSBldCBnb2R0IHJ5a3RlDQoNCiAgICAtICAgQW5kcmUgdmlsIHNlIHDDpSBlbiBmb3Jza2VyIHNvbSBwdWJsaXNlcmVyIHJlcHJvZHVzZXJiYXJmb3Jza25pbmcgc29tIGVuIHRyb3ZlcmRpZyBvZyBncnVuZGlnIGZvcnNrZXIsIG9nIGRlcnNvbSBkZXQgbm9lbiBnYW5nIGJsaXIgcHJvYmxlbWVyIG1lZCBub2UgYXYgYXJiZWlkZXQsIHZpbCBkZXQgdsOmcmUgZW5rZWx0IMOlIHZpc2Ugb2cgZm9ya2xhcmUgaHZvcmRhbiBtYW4gaGFyIHRlbmt0IG9nIGpvYmJldC4NCg0KRXIgw7hrdCByZXByb2R1c2VyYmFyaGV0IG5vZSBzb20gdmlsIHR2aW5nZSBzZWcgZnJlbSBlbGxlciBlciBkYWdlbnMgw7hrdGUgaW50ZXJlc3NlIGJhcmUgZXQgYmxhZmY/IEthbiByZXByb2R1c2VyYmFyaGV0IGhhIHJlbGV2YW5zIGkgc2VrdG9yZXIgdXRlbmZvciBha2FkZW1pYT8NCg0KIyMgS29ua2x1c2pvbg0KDQojIyBMaXR0ZXJhdHVybGlzdGUNCg0KU8OmdHJldmlrLCBCLiAoMjAxNykuIFJlcGxpa2Fzam9uc2tyaXNlbi4gKlBzeWtvbG9ndGlkc3NrcmlmdGV0LiogPGh0dHBzOi8vcHN5a29sb2d0aWRzc2tyaWZ0ZXQubm8vZmFnZXNzYXkvMjAxNy8wNy9yZXBsaWthc2pvbnNrcmlzZW4+DQoNClNjaG1pZHQsIE0uIEwuIDIwMTUuIFJlcHJvZHVjaWJsZSBSZXNlYXJjaCBVc2luZyBSTWFya2Rvd24gYW5kIEdpdCB0aHJvdWdoIFJzdHVkaW8uICpSUHVicyBieSBSc3R1ZGlvLiogPGh0dHBzOi8vcnB1YnMuY29tL21hcnNjaG1pLzEwNTYzOT4NCg==</div>
 
 
 
