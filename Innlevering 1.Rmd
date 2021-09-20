@@ -26,7 +26,7 @@ Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reprodu
 
 I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel
 
- ### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
+### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
 
 Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.
 
