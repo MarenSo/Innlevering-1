@@ -37,7 +37,14 @@ Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil 
 
 ### Mulig løsning (teoretisk plan) “Compendium”, “Dynamic document”, “code chuncks” og “text chunck”
 
-I henhold til Gentleman og Lang (2007) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
+I henhold til Gentleman og Lang (Kilde) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (Kilde). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
+
+Før var det RMarkdown som oftest ble brukt. Problemet der var at man ofte ikke fikk all tekst, data og koding i samme dokument, man måtte dele det opp i ulike tabs.
+RNotebook er den nyeste utgivelsen fra Rstudio.  
+Rstudio er en Integrated Developer Environment (IDE) for alt som er R relatert. Rstudio er gratis, både å laste ned og gratis å bruke. Man kan laste det ned lokalt på PC/Desktop eller jobbe online/remote. Alle vanlige operativ system (OS) skal være kompatible til å bruke Rstudio, bla. Mac, Windows, Linux.
+Rstudio må benyttes sammen med andre program og/eller extensions, f.eks GitAhead, GitHub Desktop, kommandolinje/terminal, for å kunne oppnå reproduserbarhet og replikerbarhet. Dette oppnås f.eks med kodeversjonskontroll, f.eks Git koblet med Github. En RNotebook er et RMarkdown dokument som inneholder kode+tekst-blokker, som henter inn koder og data, utfører beregninger og analyser i henhold til formler/kode som legges inn i Rmd filen. RNotebook vil da kunne vise oss et ferdig, vanlig tekstdokument, som inneholder tekst og koder for relevant innhold, istedenfor å ha dette i flere forskjellige filer. Dette gjør at du visuelt kan vurdere dataene mens du utvikler RMarkdown dokumentet uten å måtte «knyte» sammen hele dokumentet for å se resultatet.
+
+Dette gjør at RNotebook kan brukes til å løse problemer knyttet til reproduserbarhet og replikerbarhet.
 
 ### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
 
