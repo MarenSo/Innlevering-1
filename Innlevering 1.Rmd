@@ -1,22 +1,26 @@
 ---
 title: "R Notebook"
 output:
-  word_document: default
-  html_notebook: default
-  pdf_document: default
   html_document:
     df_print: paged
+  html_notebook: default
+  pdf_document: default
+  word_document: default
 ---
+
+```{r}
+plot(cars)
+```
 
 Minst et eksempel på bruk av følgende: *italic* **bold** ***italicbold***
 
 # Reproduserbarhet
 
-I 20xx (finn ut) oppstod det en replikasjonskrise. Denne startet innenfor psykologien, og ble for alvor offentlig kjent i 2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. De klarte kun å få samme resultat i under halvparten av studiene, og dette var selv med hjelp fra forskerne som stod bak disse studiene (<https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>). Det har senere vist seg at disse replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har det blitt større fokus på reproduserbarhet innenfor forskning. Reproduserbarhet er en forutsetning for replikerbarhet, så denne oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar, og dermed mer pålitelig.
+I senere tid har det oppstått en replikasjonskrise. Denne startet innenfor psykologien, og ble for alvor offentlig kjent i 2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. De klarte kun å få samme resultat i under halvparten av studiene, og dette var selv med hjelp fra forskerne som stod bak disse studiene (<https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>). Det har senere vist seg at disse replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har det blitt større fokus på reproduserbarhet innenfor forskning. Reproduserbarhet er en forutsetning for replikerbarhet, så denne oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar, og dermed mer pålitelig.
 
 ## Litteraturgjennomgang
 
-Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reproduserbarhet" og "replikerbarhet". Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: "reproduserbarhet" oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. "Replikerbarhet" oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved "replikerbarhet" så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er et krav for å kunne oppnå replikerbarhet.
+Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reproduserbarhet" og "replikerbarhet". Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: "reproduserbarhet" oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. "Replikerbarhet" oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved "replikerbarhet" så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er en betingelse for å kunne oppnå replikerbarhet.
 
 ### Problemets omfang
 
@@ -26,13 +30,7 @@ I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tids
 
 ### Mulig løsning (teoretisk plan) "Compendium", "Dynamic document", "code chuncks" og "text chunck"
 
-Compendium:
-
-Dynamic document: <https://www.igi-global.com/dictionary/dynamic-reconstruction-concept-maps/8490> Et dokument som er ikke-permanent. Det er ikke ment å brukes til arkivering, men for å formidle informasjon. Digitalt dokument, det genereres av automatisert programvare som samler informasjon fra en database og deretter settet den inn i en forhåndsinnstilt mal.
-
-Code chuncks: <https://rmarkdown.rstudio.com/lesson-3.html> R notebook lar oss ha "code chunks" i teksten.
-
-Text chunck: Tekstbolker i dokumentet (R Notebook/Markdown)
+En mulig løsning på problemet kan være å publisere forskningsartikler i kompendier, som også inneholder datasett og koder som er brukt i forskningen. I et slikt kompendium kan det være dokumenter som kan oppdateres, også kjent som dynamiske dokumenter. I Rstudio kan man lage dynamiske dokumenter som blander tekst og R-kode. Et slikt dokument består av "text chunks" og "code chunks", altså bolker med både ren tekst og koding.
 
 ### Mulig løsning R Notebooks
 
@@ -40,7 +38,13 @@ Daniel skrevet
 
 ## Analyse
 
-Løser R Notebooks problemet med reproduserbarhet? Helt eller bare delvis?
+Løser R Notebooks problemet med reproduserbarhet? Helt eller bare delvis? Med riktig bruk av R Notebook kan problemet med reproduserbarhet løses.
+
+Dette dokumentet er skrevet i R studio, og det meste her er tekst, men som tidligere nevnt er fordelen med R Notebook at man kan blande bolker med tekst, sammen med bolker av koder. Når man laster ned pakker i Rstudio får man med noen dataset, som man kan bruke til å øve seg. Et av disse datasettene heter "cars" og code chunksene under henter data fra dette settet. Den først koden viser hvor langt den lengste bilen i datasettet kjørte.
+
+```{r}
+max(cars$dist)
+```
 
 Eksempler på "Code chuncks" ("R Code Block") og "text chunck i R notebook.
 
@@ -62,7 +66,7 @@ I følge Florian Markowetz (20xx) er det følgende fem egoistiske hovedgrunner t
 
 4.  Det muliggjør kontinuitet i arbeidet
 
-    -   Det vil for eksempel ikke være noen krise dersom forskeren har glemt fremgangsmåten vedkommende brukte i forskningen sin i fjor. Det vil være muligheter for å kunne se hvordan man har tenkt og jobbet med studiet.
+    -   Det vil for eksempel ikke være noe stort problem dersom forskeren har glemt fremgangsmåten vedkommende brukte i forskningen sin i fjor. Det vil være muligheter for å kunne se hvordan man har tenkt og jobbet med studiet.
 
 5.  Hjelper deg å opparbeide et godt rykte
 
