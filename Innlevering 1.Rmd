@@ -1,52 +1,65 @@
 ---
-title: "R Notebook"
+title: "R Notebook og reproduserbarhet"
+author: Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel Karstad
+Affiliation: HVL
+email: 152148@stud.hvl.no & xxxxxx@stud.hvl.no
+bibliography: reproducibility.bib
+csl: apa-no-ampersand
+fontsize: 12pt
 output:
-  pdf_document: default
-  html_notebook: default
   html_document:
     df_print: paged
+  html_notebook: default
+  pdf_document: default
   word_document: default
 ---
+
 
 ```{r}
 plot(cars)
 ```
 
-Minst et eksempel på bruk av følgende: *italic* **bold** ***italicbold***
+Vi mangler:
+
+Kjør sessioninfo
+
+4)  Minst 1 internt bilde skal være screenshot av git history som:
+
+5)  Dokumenterer minst 10 «commits»2) Dokumenterer bruk av minst 3 «branches»3) Ekstra stjerne til dem som klarer å få til en «merge conflict» ;-)4) Bildet som dokumenterer git history skal være i et appendiks som kommer helttil slutt i dokumentet (etter referansene)5) KjørsessionInfo()i en code-chunk (husk å gi chunk-en navn). Hvordan kan dennefunksjonen hjelpe oss med å gjøre et dokument reproduserbart?6) Vi benytter apa for sitering og referanseliste (apa-no-ampersand.csler tilgjengeligunderFileri Canvas.)
+
+Bruk begge siteringsformene, dvs med og uten[]1) Husk at for å få siteringsinfo for R pakker kan dere bruke kommandoento Bibtex(citation(\<navn-R-pakke\>)), f.eks
+
+Vi mangler flere kilder, også i teksten
+
+Minst et eksempel på bruk av følgende: **bold** ***italicbold***
 
 # Reproduserbarhet
 
-I senere tid har det oppstått en replikasjonskrise. Denne startet innenfor psykologien, og ble for alvor offentlig kjent i 2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. De klarte kun å få samme resultat i under halvparten av studiene, og dette var selv med hjelp fra forskerne som stod bak disse studiene (<https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>). Det har senere vist seg at disse replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har det blitt større fokus på reproduserbarhet innenfor forskning. Reproduserbarhet er en forutsetning for replikerbarhet, så denne oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar, og dermed mer pålitelig.
+I senere tid har det oppstått en replikasjonskrise innenfor forskning. Denne startet innenfor psykologien, og ble for alvor offentlig kjent i 2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier som alle var publisert i ledende tidsskrifter innenfor fagfeltet. Da de forsøkte å replikere studiene, klarte de kun å få samme resultat i under halvparten av studiene, og dette var med hjelp fra forskerne som stod bak disse studiene (Sætrevik B., 2017). Det har senere vist seg at disse replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har det blitt større fokus på reproduserbarhet innenfor forskning. Reproduserbarhet er en forutsetning for replikerbarhet, så denne oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R notebooks kan være en mulig løsning for å gjøre forskning reproduserbar, og dermed mer pålitelig.
 
 ## Litteraturgjennomgang
 
-Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reproduserbarhet" og "replikerbarhet". Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: "reproduserbarhet" oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. "Replikerbarhet" oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved "replikerbarhet" så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er en betingelse for å kunne oppnå replikerbarhet.
+Det er enda ingen allmenn definisjon av "reproduserbarhet" og "replikerbarhet". Noen bruker disse begrepene om hverandre (Bollen et al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille begrepene tydelig fra hverandre og bruke Bollens (et al., 2015) definisjoner av begrepene: "reproduserbarhet" oppstår dersom forskere klarer å komme frem til samme resultat ved å bruke samme prosedyre og samme datasett som gjort ved det opprinnelige studiet. "Replikerbarhet" oppstår dersom forskere klarer å komme frem til samme resultatet ved å bruke samme prosedyre og et nytt datasett. Hovedforskjellen er altså at ved "replikerbarhet" så skal det hentes inn nye data, men resultatet skal likevel bli det samme. De som prøver å replikere eller reprodusere studiet må altså ha tilgang til alt av data, kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er en betingelse for å kunne oppnå replikerbarhet.
 
 ### Problemets omfang
 
-I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel
-
-### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
-
-Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.
+I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene, men det er flere forskere o.l. som ikke ønsker å gi fra seg denne informasjonen. Dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problemer, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.
 
 Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det menneskelige aspektet i problemstillingen er ofte knyttet til det forskerne selv velger å dele av data, informasjon, koder, hypoteser, fremgangsmåte, programvare og så videre. Det har ikke vært praktisert, og standard retningslinjer for hva som bør ansees som god forskningsskikk og praksis er nødt å komme på plass for å møte kravene om tilfredsstillende reproduksjon og replikasjon. Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil som har oppstått underveis. Ved at man kan integrere og implementere programkode hos tidsskriftene, synlig eller usynlig, så skal det være mulig for andre forskere å reprodusere studien og gjøre den replikerbar.
 
-#### Oversikt over hva som bør sendes til tidsskriftene:
+#### Oversikt over hva som bør sendes til tidsskriftene for å gjøre studien replikerbar:
 
--   En kode til å kune lese inn dataen med
+-   En kode til å kunne lese inn dataen med
 -   En kode til å kalkulere og analysere dataen
 -   En kode for å teste i henhold til hypoetese
 -   En kode for å generere en rapport av resultatet
 
 ### Mulig løsning (teoretisk plan) "Compendium", "Dynamic document", "code chuncks" og "text chunck"
 
-I henhold til Gentleman og Lang (Kilde) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (Kilde). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
+I henhold til Gentleman og Lang (Kilde) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
 
-Før var det RMarkdown som oftest ble brukt. Problemet der var at man ofte ikke fikk all tekst, data og koding i samme dokument, man måtte dele det opp i ulike tabs.
-RNotebook er den nyeste utgivelsen fra Rstudio.  
-Rstudio er en Integrated Developer Environment (IDE) for alt som er R relatert. Rstudio er gratis, både å laste ned og gratis å bruke. Man kan laste det ned lokalt på PC/Desktop eller jobbe online/remote. Alle vanlige operativ system (OS) skal være kompatible til å bruke Rstudio, bla. Mac, Windows, Linux.
-Rstudio må benyttes sammen med andre program og/eller extensions, f.eks GitAhead, GitHub Desktop, kommandolinje/terminal, for å kunne oppnå reproduserbarhet og replikerbarhet. Dette oppnås f.eks med kodeversjonskontroll, f.eks Git koblet med Github. En RNotebook er et RMarkdown dokument som inneholder kode+tekst-blokker, som henter inn koder og data, utfører beregninger og analyser i henhold til formler/kode som legges inn i Rmd filen. RNotebook vil da kunne vise oss et ferdig, vanlig tekstdokument, som inneholder tekst og koder for relevant innhold, istedenfor å ha dette i flere forskjellige filer. Dette gjør at du visuelt kan vurdere dataene mens du utvikler RMarkdown dokumentet uten å måtte «knyte» sammen hele dokumentet for å se resultatet.
+Før var det RMarkdown som oftest ble brukt. Problemet der var at man ofte ikke fikk all tekst, data og koding i samme dokument, man måtte dele det opp i ulike tabs. RNotebook er den nyeste utgivelsen fra Rstudio.\
+Rstudio er en Integrated Developer Environment (IDE) for alt som er R relatert. Rstudio er gratis, både å laste ned og gratis å bruke. Man kan laste det ned lokalt på PC/Desktop eller jobbe online/remote. Alle vanlige operativ system (OS) skal være kompatible til å bruke Rstudio, bla. Mac, Windows, Linux. Rstudio må benyttes sammen med andre program og/eller extensions, f.eks GitAhead, GitHub Desktop, kommandolinje/terminal, for å kunne oppnå reproduserbarhet og replikerbarhet. Dette oppnås f.eks med kodeversjonskontroll, f.eks Git koblet med Github. En RNotebook er et RMarkdown dokument som inneholder kode+tekst-blokker, som henter inn koder og data, utfører beregninger og analyser i henhold til formler/kode som legges inn i Rmd filen. RNotebook vil da kunne vise oss et ferdig, vanlig tekstdokument, som inneholder tekst og koder for relevant innhold, istedenfor å ha dette i flere forskjellige filer. Dette gjør at du visuelt kan vurdere dataene mens du utvikler RMarkdown dokumentet uten å måtte «knyte» sammen hele dokumentet for å se resultatet.
 
 Dette gjør at RNotebook kan brukes til å løse problemer knyttet til reproduserbarhet og replikerbarhet.
 
@@ -60,25 +73,21 @@ Daniel skrevet
 
 ## Analyse
 
-Løser R Notebooks problemet med reproduserbarhet? Helt eller bare delvis? Med riktig bruk av R Notebook kan problemet med reproduserbarhet løses.
-
-Dette dokumentet er skrevet i R studio, og det meste her er tekst, men som tidligere nevnt er fordelen med R Notebook at man kan blande bolker med tekst, sammen med bolker av koder. Når man laster ned pakker i Rstudio får man med noen dataset, som man kan bruke til å øve seg. Et av disse datasettene heter "cars" og code chunksene under henter data fra dette settet. Den først koden viser hvor langt den lengste bilen i datasettet kjørte.
+Med riktig bruk av R Notebook kan problemet med reproduserbarhet løses. Dette dokumentet er skrevet i R studio, og det meste her er tekst, men som tidligere nevnt er fordelen med R Notebook at man kan blande bolker med tekst, sammen med bolker av koder. Når man laster ned pakker i Rstudio får man med noen dataset, som man kan bruke til å øve seg. Et av disse datasettene heter "cars" og code chunksene under henter data fra dette settet. Den først koden viser hvor langt den lengste bilen i datasettet kjørte.
 
 ```{r}
 max(cars$dist)
 ```
 
-Har forskerne incentiver til å være "reproduserbare", eller må de tvinges?
-
-I følge Florian Markowetz (20xx) er det følgende fem egoistiske hovedgrunner til at forskerne selv burde ønske å publisere reproduserbar forskning:
+I følge Florian Markowetz (2015) er det følgende fem egoistiske hovedgrunner til at forskerne selv burde ønske å publisere reproduserbar forskning:
 
 1.  Man unngår katastrofer
 
-    -   blabla
+    -   som replikasjonskrisen innenfor psykologi.
 
 2.  Det er lettere å skrive artikler
 
-    -   blabla
+    -   
 
 3.  Lettere for fagfeller å forstå tankegangen
 
@@ -96,13 +105,30 @@ Er økt reproduserbarhet noe som vil tvinge seg frem eller er dagens økte inter
 
 ## Konklusjon
 
-Vi kan konkludere med at RNotebook bidrar til å gjøre det mulig å reprodusere, replikere og generalisere et studie, dette ved hjelp av en dynamisk RMD fil som inneholder både data, koder, fremgangsmåte, resultat og referanser, som igjen produserer docx-, tex- og html-versjoner.
-Noe som kan by på hodebry og problemer er alle programmene, extensions og Git som skal kommunisere sammen. Dette bidrar til et uoversiktlig bilde i starten, og for de som skal ta det i bruk krever det en bratt læringskurve.
-Det man kan trekke frem som positivt for en forsker som skal ta dette i bruk er at man kan referere til logikk og utregninger direkte i dokumentet. Det viser hva som ligger bak og er ikke bare en visuell presentasjon. Om forskere da inkluderer alt av data, koder, fremgangsmåte og full utredelse for hva som har blitt gjort så vil dette kunne brukes av alle til å forstå og kunne brukes i en senere studie, eller bare brukes som en referanse i en ny studie/forskningsrapporter.
-Man bør ha flere retningslinjer og krav til hva man bør inkludere når man publiserer nye studier/rapporter/undersøkelser, dette vil bidra til økt standard for fremtidig bruk.
+Vi kan konkludere med at RNotebook bidrar til å gjøre det mulig å reprodusere, replikere og generalisere et studie, dette ved hjelp av en dynamisk RMD fil som inneholder både data, koder, fremgangsmåte, resultat og referanser, som igjen produserer docx-, tex- og html-versjoner. Noe som kan by på hodebry og problemer er alle programmene, extensions og Git som skal kommunisere sammen. Dette bidrar til et uoversiktlig bilde i starten, og for de som skal ta det i bruk krever det en bratt læringskurve. Det man kan trekke frem som positivt for en forsker som skal ta dette i bruk er at man kan referere til logikk og utregninger direkte i dokumentet. Det viser hva som ligger bak og er ikke bare en visuell presentasjon. Om forskere da inkluderer alt av data, koder, fremgangsmåte og full utredelse for hva som har blitt gjort så vil dette kunne brukes av alle til å forstå og kunne brukes i en senere studie, eller bare brukes som en referanse i en ny studie/forskningsrapporter. Man bør ha flere retningslinjer og krav til hva man bør inkludere når man publiserer nye studier/rapporter/undersøkelser, dette vil bidra til økt standard for fremtidig bruk.
 
 ## Litteraturliste
 
 Sætrevik, B. (2017). Replikasjonskrisen. *Psykologtidsskriftet.* <https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>
 
+
+Bollen K., Cacioppo, J. T., Dean H., Kaplan R. M., Krosnick J. A. & Olds J. L. (2015). *Social, Behavaioral, and Economic Sciences Perspectives on Robust and Reliable Science.* (Report of the Subcommittee on Replicability in Science Advisory Committee to the National Science Foundation Directorate for Social, Behavioral, and Economic Sciences). <https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf>
+
+\
+Leek, J. T., & Peng R. D. (2015) Opinion: Reproducible research can still be wrong: Adopting a prevention approach. *Proceedings of the National Academy of Sciences, 112*(6), 1645-1646
+
+Goodman, S. N., Fanelli, D. & Ioannidis, J. P. A. (2016). What does research reproducibility mean? *Science Translational Medicine,* 8(341) 1-6.
+
 Schmidt, M. L. 2015. Reproducible Research Using RMarkdown and Git through Rstudio. *RPubs by Rstudio.* <https://rpubs.com/marschmi/105639>
+
+Markowitz, F., Five selfish reasons to work reproducibly. *Genome Biology, 16*(1) 274. <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7>
+
+Gentleman, R. & Lang, D. T. Statistical analyses and reproducible research. *Journal of Computational and Graphical Statistics, 16*(1) 1-23. <https://www.tandfonline.com/doi/abs/10.1198/106186007X178663>
+
+
+
+Litteraturliste ved bruk av @:
+
+@Nüst  
+
+
