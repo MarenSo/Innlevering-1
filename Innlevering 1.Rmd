@@ -14,23 +14,22 @@ output:
   word_document: default
 ---
 
-```{r}
-plot(cars)
+```{r -first chunk: Sessioninfo}
+sessionInfo()
 ```
 
-Vi mangler:
+Her kjøres sessioninfo. Hvordan kan denne funksjonen hjelpe oss med å gjøre et dokument reproduserbart?
 
-Kjør sessioninfo
+Kan du gjøre det som gjenstår og mangler? Vi mangler: 
+- svar på spørsmålet over
 
-4)  Minst 1 internt bilde skal være screenshot av git history som:
+- Bruk begge siteringsformene, dvs med og uten[] 1) Husk at for å få siteringsinfo for R pakker kan dere bruke kommandoento Bibtex(citation(\<navn-R-pakke\>)), f.eks
 
-5)  Dokumenterer minst 10 «commits»2) Dokumenterer bruk av minst 3 «branches»3) Ekstra stjerne til dem som klarer å få til en «merge conflict» ;-)4) Bildet som dokumenterer git history skal være i et appendiks som kommer helttil slutt i dokumentet (etter referansene)5) KjørsessionInfo()i en code-chunk (husk å gi chunk-en navn). Hvordan kan dennefunksjonen hjelpe oss med å gjøre et dokument reproduserbart?6) Vi benytter apa for sitering og referanseliste (apa-no-ampersand.csler tilgjengeligunderFileri Canvas.)
+-   Vi mangler kilder i teksten en del steder.
 
-Bruk begge siteringsformene, dvs med og uten[]1) Husk at for å få siteringsinfo for R pakker kan dere bruke kommandoento Bibtex(citation(\<navn-R-pakke\>)), f.eks
+-   Minst et eksempel på bruk av følgende: **bold** ***italicbold***
 
-Vi mangler flere kilder, også i teksten
-
-Minst et eksempel på bruk av følgende: **bold** ***italicbold***
+- Kan du se om du får til å lagre litteraturliste med bruk av @? Jeg får det ikke til, selvom jeg har lagt inn bib og csl i mappen og i dette dokumentet. 
 
 # Reproduserbarhet
 
@@ -125,6 +124,8 @@ Gentleman, R. & Lang, D. T. Statistical analyses and reproducible research. *Jou
 
 Litteraturliste ved bruk av
 
-@markowetz
+@Markowetz
 
-![git log/siste commits](git.log.jpg)
+# Appendiks
+
+![git log/siste commits. Bildet viser siste commits, og at det er brukt flere branches (her: master, teori og konklusjon)](git.log.jpg)
