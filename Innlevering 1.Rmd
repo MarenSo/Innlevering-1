@@ -18,9 +18,9 @@ output:
 ```{r -first chunk: Sessioninfo}
 sessionInfo()
 ```
-Her kjøres sessioninfo. Hvordan kan denne funksjonen hjelpe oss med å gjøre et dokument reproduserbart?
+#### Over her sees sessioninfo. Hvordan kan denne funksjonen hjelpe oss med å gjøre et dokument reproduserbart?
 
-
+Session info er en samling av all informasjon om hva som faktisk har blitt gjort i R, operativ systemet og tilhørende extensions. Dette bidrar til å gjøre et dokument reproduserbart og replikerbart, fordi det sier noe om hvilke system og extensions som er brukt i R for å flette alt sammen. Om du studerer session info i .pdf så ser du det. Om det for eksempel har vært bug i en extension som er tidligere brukt vil jo det kunne forstyrre fremtidige undersøkelser/studier.
 
 # Reproduserbarhet
 
