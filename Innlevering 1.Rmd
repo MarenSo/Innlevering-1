@@ -4,7 +4,7 @@ author: Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel Karstad
 Affiliation: HVL
 email: 152148@stud.hvl.no & 598289@stud.hvl.no
 bibliography: references.bib
-nocite: '@*'
+nocite: '@sætrevik2017, @markowitz, @Schmidt, @Gentleman, @goodman2016, @klein2018'
 csl: apa-no-ampersand
 fontsize: 12pt
 output:
