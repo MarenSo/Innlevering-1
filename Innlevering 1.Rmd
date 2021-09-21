@@ -1,5 +1,12 @@
 ---
-title: "R Notebook"
+title: "R Notebook og reproduserbarhet"
+author: Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel Karstad
+Affiliation: HVL
+email: 152148@stud.hvl.no & 598289@stud.hvl.no
+bibliography: references.bib
+nocite: '@*'
+csl: apa-no-ampersand
+fontsize: 12pt
 output:
   html_document:
     df_print: paged
@@ -109,3 +116,17 @@ Man bør ha flere retningslinjer og krav til hva man bør inkludere når man pub
 Sætrevik, B. (2017). Replikasjonskrisen. *Psykologtidsskriftet.* <https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>
 
 Schmidt, M. L. 2015. Reproducible Research Using RMarkdown and Git through Rstudio. *RPubs by Rstudio.* <https://rpubs.com/marschmi/105639>
+
+Markowitz, F., Five selfish reasons to work reproducibly. *Genome Biology, 16*(1) 274. <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7>
+
+Gentleman, R. & Lang, D. T. Statistical analyses and reproducible research. *Journal of Computational and Graphical Statistics, 16*(1) 1-23. <https://www.tandfonline.com/doi/abs/10.1198/106186007X178663>
+
+Litteraturliste ved bruk av
+# References
+
+<div id="refs"></div>
+@Markowetz
+
+# Appendiks
+
+![git log/siste commits. Bildet viser siste commits, og at det er brukt flere branches (her: master, teori og konklusjon)](git.log.jpg)
