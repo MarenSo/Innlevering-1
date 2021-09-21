@@ -14,7 +14,6 @@ output:
   word_document: default
 ---
 
-
 ```{r}
 plot(cars)
 ```
@@ -111,7 +110,6 @@ Vi kan konkludere med at RNotebook bidrar til å gjøre det mulig å reprodusere
 
 Sætrevik, B. (2017). Replikasjonskrisen. *Psykologtidsskriftet.* <https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen>
 
-
 Bollen K., Cacioppo, J. T., Dean H., Kaplan R. M., Krosnick J. A. & Olds J. L. (2015). *Social, Behavaioral, and Economic Sciences Perspectives on Robust and Reliable Science.* (Report of the Subcommittee on Replicability in Science Advisory Committee to the National Science Foundation Directorate for Social, Behavioral, and Economic Sciences). <https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf>
 
 \
@@ -125,10 +123,8 @@ Markowitz, F., Five selfish reasons to work reproducibly. *Genome Biology, 16*(1
 
 Gentleman, R. & Lang, D. T. Statistical analyses and reproducible research. *Journal of Computational and Graphical Statistics, 16*(1) 1-23. <https://www.tandfonline.com/doi/abs/10.1198/106186007X178663>
 
+Litteraturliste ved bruk av
 
+@markowetz
 
-Litteraturliste ved bruk av @:
-
-@Nüst  
-
-
+![git log/siste commits](git.log.jpg)
