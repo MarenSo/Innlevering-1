@@ -3,6 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
+  12pt,
 ]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -36,11 +37,52 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={R Notebook},
+  pdftitle={R Notebook og reproduserbarhet},
+  pdfauthor={Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel Karstad},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -62,24 +104,335 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{R Notebook}
-\author{}
-\date{\vspace{-2.5em}}
+\title{R Notebook og reproduserbarhet}
+\author{Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel
+Karstad}
+\date{}
 
 \begin{document}
 \maketitle
 
-\hypertarget{header-1-minst-4-overskrifter}{%
-\section{Header 1 (minst 4
-overskrifter)}\label{header-1-minst-4-overskrifter}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(cars)}
+\end{Highlighting}
+\end{Shaded}
 
-\hypertarget{header-2}{%
-\subsection{Header 2}\label{header-2}}
+\includegraphics{Innlevering-1_files/figure-latex/unnamed-chunk-1-1.pdf}
 
-\hypertarget{header-3}{%
-\subsubsection{Header 3}\label{header-3}}
+Vi mangler:
 
-\hypertarget{ordnet-liste-minst-1}{%
-\subsubsection{Ordnet liste (minst 1):}\label{ordnet-liste-minst-1}}
+Kjør sessioninfo
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{3}
+\item
+  Minst 1 internt bilde skal være screenshot av git history som:
+\item
+  Dokumenterer minst 10 «commits»2) Dokumenterer bruk av minst 3
+  «branches»3) Ekstra stjerne til dem som klarer å få til en «merge
+  conflict» ;-)4) Bildet som dokumenterer git history skal være i et
+  appendiks som kommer helttil slutt i dokumentet (etter referansene)5)
+  KjørsessionInfo()i en code-chunk (husk å gi chunk-en navn). Hvordan
+  kan dennefunksjonen hjelpe oss med å gjøre et dokument
+  reproduserbart?6) Vi benytter apa for sitering og referanseliste
+  (apa-no-ampersand.csler tilgjengeligunderFileri Canvas.)
+\end{enumerate}
+
+Bruk begge siteringsformene, dvs med og uten{[}{]}1) Husk at for å få
+siteringsinfo for R pakker kan dere bruke kommandoento
+Bibtex(citation(\textless navn-R-pakke\textgreater)), f.eks
+
+Vi mangler flere kilder, også i teksten
+
+Minst et eksempel på bruk av følgende: \textbf{bold}
+\textbf{\emph{italicbold}}
+
+\hypertarget{reproduserbarhet}{%
+\section{Reproduserbarhet}\label{reproduserbarhet}}
+
+I senere tid har det oppstått en replikasjonskrise innenfor forskning.
+Denne startet innenfor psykologien, og ble for alvor offentlig kjent i
+2015 da 270 forskere samarbeidet om å forsøke å replikere 100 studier
+som alle var publisert i ledende tidsskrifter innenfor fagfeltet. Da de
+forsøkte å replikere studiene, klarte de kun å få samme resultat i under
+halvparten av studiene, og dette var med hjelp fra forskerne som stod
+bak disse studiene (Sætrevik B., 2017). Det har senere vist seg at disse
+replikasjonsproblemene finnes innenfor flere fagfelt, og i ettertid har
+det blitt større fokus på reproduserbarhet innenfor forskning.
+Reproduserbarhet er en forutsetning for replikerbarhet, så denne
+oppgaven skal vi ta for oss reproduserbarhet og hvorvidt bruk av R og R
+notebooks kan være en mulig løsning for å gjøre forskning reproduserbar,
+og dermed mer pålitelig.
+
+\hypertarget{litteraturgjennomgang}{%
+\subsection{Litteraturgjennomgang}\label{litteraturgjennomgang}}
+
+Det er enda ingen allmenn definisjon av ``reproduserbarhet'' og
+``replikerbarhet.'' Noen bruker disse begrepene om hverandre (Bollen et
+al., 2015), og andre er nøye med å skille dem fra hverandre (Leek and
+Peng, 2015: Goodman et al., 2016). I denne oppgaven vil vi skille
+begrepene tydelig fra hverandre og bruke Bollens (et al., 2015)
+definisjoner av begrepene: ``reproduserbarhet'' oppstår dersom forskere
+klarer å komme frem til samme resultat ved å bruke samme prosedyre og
+samme datasett som gjort ved det opprinnelige studiet.
+``Replikerbarhet'' oppstår dersom forskere klarer å komme frem til samme
+resultatet ved å bruke samme prosedyre og et nytt datasett.
+Hovedforskjellen er altså at ved ``replikerbarhet'' så skal det hentes
+inn nye data, men resultatet skal likevel bli det samme. De som prøver å
+replikere eller reprodusere studiet må altså ha tilgang til alt av data,
+kildekode og prosedyredetaljer. Man kan dermed si at reproduserbarhet er
+en betingelse for å kunne oppnå replikerbarhet.
+
+\hypertarget{problemets-omfang}{%
+\subsubsection{Problemets omfang}\label{problemets-omfang}}
+
+I lys av replikasjonskrisen og det økte fokuset på replikasjon, har
+flere tidsskrifter begynt å publisere tilhørende datasett sammen med
+artiklene, men det er flere forskere o.l. som ikke ønsker å gi fra seg
+denne informasjonen. Dette gjelder data de besitter, koder,
+fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på,
+hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere
+studie, på et senere tidspunkt. Siden det samlet er flere problemer, vil
+det naturligvis også være flere løsninger som må tas i bruk for at full
+reproduksjon skal være oppnåelig og man skal komme frem til lignende
+konklusjoner med ny data og ny sammensetning.
+
+Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det
+menneskelige aspektet i problemstillingen er ofte knyttet til det
+forskerne selv velger å dele av data, informasjon, koder, hypoteser,
+fremgangsmåte, programvare og så videre. Det har ikke vært praktisert,
+og standard retningslinjer for hva som bør ansees som god
+forskningsskikk og praksis er nødt å komme på plass for å møte kravene
+om tilfredsstillende reproduksjon og replikasjon. Det tekniske aspektet
+byr på mangel av data, koder, feil i programvare og feil som har
+oppstått underveis. Ved at man kan integrere og implementere programkode
+hos tidsskriftene, synlig eller usynlig, så skal det være mulig for
+andre forskere å reprodusere studien og gjøre den replikerbar.
+
+\hypertarget{oversikt-over-hva-som-buxf8r-sendes-til-tidsskriftene-for-uxe5-gjuxf8re-studien-replikerbar}{%
+\paragraph{Oversikt over hva som bør sendes til tidsskriftene for å
+gjøre studien
+replikerbar:}\label{oversikt-over-hva-som-buxf8r-sendes-til-tidsskriftene-for-uxe5-gjuxf8re-studien-replikerbar}}
+
+\begin{itemize}
+\tightlist
+\item
+  En kode til å kunne lese inn dataen med
+\item
+  En kode til å kalkulere og analysere dataen
+\item
+  En kode for å teste i henhold til hypoetese
+\item
+  En kode for å generere en rapport av resultatet
+\end{itemize}
+
+\hypertarget{mulig-luxf8sning-teoretisk-plan-compendium-dynamic-document-code-chuncks-og-text-chunck}{%
+\subsubsection{Mulig løsning (teoretisk plan) ``Compendium,'' ``Dynamic
+document,'' ``code chuncks'' og ``text
+chunck''}\label{mulig-luxf8sning-teoretisk-plan-compendium-dynamic-document-code-chuncks-og-text-chunck}}
+
+I henhold til Gentleman og Lang (Kilde) er det nøye å integrere koder og
+beregninger som blir brukt i dataanalyser, metodebeskrivelser og
+simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av
+Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over
+hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet
+til da gi en oversikt over innholdet, slik som tekst, kode, data,
+metodikk, hypotese, problemstilling og så videre. Dette gjør at
+kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan
+håndteres og oppdateres i henhold.
+
+Før var det RMarkdown som oftest ble brukt. Problemet der var at man
+ofte ikke fikk all tekst, data og koding i samme dokument, man måtte
+dele det opp i ulike tabs. RNotebook er den nyeste utgivelsen fra
+Rstudio.\\
+Rstudio er en Integrated Developer Environment (IDE) for alt som er R
+relatert. Rstudio er gratis, både å laste ned og gratis å bruke. Man kan
+laste det ned lokalt på PC/Desktop eller jobbe online/remote. Alle
+vanlige operativ system (OS) skal være kompatible til å bruke Rstudio,
+bla. Mac, Windows, Linux. Rstudio må benyttes sammen med andre program
+og/eller extensions, f.eks GitAhead, GitHub Desktop,
+kommandolinje/terminal, for å kunne oppnå reproduserbarhet og
+replikerbarhet. Dette oppnås f.eks med kodeversjonskontroll, f.eks Git
+koblet med Github. En RNotebook er et RMarkdown dokument som inneholder
+kode+tekst-blokker, som henter inn koder og data, utfører beregninger og
+analyser i henhold til formler/kode som legges inn i Rmd filen.
+RNotebook vil da kunne vise oss et ferdig, vanlig tekstdokument, som
+inneholder tekst og koder for relevant innhold, istedenfor å ha dette i
+flere forskjellige filer. Dette gjør at du visuelt kan vurdere dataene
+mens du utvikler RMarkdown dokumentet uten å måtte «knyte» sammen hele
+dokumentet for å se resultatet.
+
+Dette gjør at RNotebook kan brukes til å løse problemer knyttet til
+reproduserbarhet og replikerbarhet.
+
+\hypertarget{vil-dagens-luxf8sning-med-arkiv-av-data-og-eventuell-programkode-hos-tidsskriftene-kunne-luxf8se-problemet}{%
+\subsubsection{Vil dagens løsning med arkiv av data og eventuell
+programkode hos tidsskriftene kunne løse
+problemet?}\label{vil-dagens-luxf8sning-med-arkiv-av-data-og-eventuell-programkode-hos-tidsskriftene-kunne-luxf8se-problemet}}
+
+En mulig løsning på problemet kan være å publisere forskningsartikler i
+kompendier, som også inneholder datasett og koder som er brukt i
+forskningen. I et slikt kompendium kan det være dokumenter som kan
+oppdateres, også kjent som dynamiske dokumenter. I Rstudio kan man lage
+dynamiske dokumenter som blander tekst og R-kode. Et slikt dokument
+består av ``text chunks'' og ``code chunks,'' altså bolker med både ren
+tekst og koding.
+
+\hypertarget{mulig-luxf8sning-r-notebooks}{%
+\subsubsection{Mulig løsning R
+Notebooks}\label{mulig-luxf8sning-r-notebooks}}
+
+Daniel skrevet
+
+\hypertarget{analyse}{%
+\subsection{Analyse}\label{analyse}}
+
+Med riktig bruk av R Notebook kan problemet med reproduserbarhet løses.
+Dette dokumentet er skrevet i R studio, og det meste her er tekst, men
+som tidligere nevnt er fordelen med R Notebook at man kan blande bolker
+med tekst, sammen med bolker av koder. Når man laster ned pakker i
+Rstudio får man med noen dataset, som man kan bruke til å øve seg. Et av
+disse datasettene heter ``cars'' og code chunksene under henter data fra
+dette settet. Den først koden viser hvor langt den lengste bilen i
+datasettet kjørte.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{max}\NormalTok{(cars}\SpecialCharTok{$}\NormalTok{dist)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 120
+\end{verbatim}
+
+I følge Florian Markowetz (2015) er det følgende fem egoistiske
+hovedgrunner til at forskerne selv burde ønske å publisere reproduserbar
+forskning:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Man unngår katastrofer
+
+  \begin{itemize}
+  \tightlist
+  \item
+    som replikasjonskrisen innenfor psykologi.
+  \end{itemize}
+\item
+  Det er lettere å skrive artikler
+
+  \begin{itemize}
+  \tightlist
+  \item
+  \end{itemize}
+\item
+  Lettere for fagfeller å forstå tankegangen
+
+  \begin{itemize}
+  \tightlist
+  \item
+    blabla
+  \end{itemize}
+\item
+  Det muliggjør kontinuitet i arbeidet
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Det vil for eksempel ikke være noe stort problem dersom forskeren
+    har glemt fremgangsmåten vedkommende brukte i forskningen sin i
+    fjor. Det vil være muligheter for å kunne se hvordan man har tenkt
+    og jobbet med studiet.
+  \end{itemize}
+\item
+  Hjelper deg å opparbeide et godt rykte
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Andre vil se på en forsker som publiserer reproduserbarforskning som
+    en troverdig og grundig forsker, og dersom det noen gang blir
+    problemer med noe av arbeidet, vil det være enkelt å vise og
+    forklare hvordan man har tenkt og jobbet.
+  \end{itemize}
+\end{enumerate}
+
+Er økt reproduserbarhet noe som vil tvinge seg frem eller er dagens økte
+interesse bare et blaff? Kan reproduserbarhet ha relevans i sektorer
+utenfor akademia?
+
+\hypertarget{konklusjon}{%
+\subsection{Konklusjon}\label{konklusjon}}
+
+Vi kan konkludere med at RNotebook bidrar til å gjøre det mulig å
+reprodusere, replikere og generalisere et studie, dette ved hjelp av en
+dynamisk RMD fil som inneholder både data, koder, fremgangsmåte,
+resultat og referanser, som igjen produserer docx-, tex- og
+html-versjoner. Noe som kan by på hodebry og problemer er alle
+programmene, extensions og Git som skal kommunisere sammen. Dette bidrar
+til et uoversiktlig bilde i starten, og for de som skal ta det i bruk
+krever det en bratt læringskurve. Det man kan trekke frem som positivt
+for en forsker som skal ta dette i bruk er at man kan referere til
+logikk og utregninger direkte i dokumentet. Det viser hva som ligger bak
+og er ikke bare en visuell presentasjon. Om forskere da inkluderer alt
+av data, koder, fremgangsmåte og full utredelse for hva som har blitt
+gjort så vil dette kunne brukes av alle til å forstå og kunne brukes i
+en senere studie, eller bare brukes som en referanse i en ny
+studie/forskningsrapporter. Man bør ha flere retningslinjer og krav til
+hva man bør inkludere når man publiserer nye
+studier/rapporter/undersøkelser, dette vil bidra til økt standard for
+fremtidig bruk.
+
+\hypertarget{litteraturliste}{%
+\subsection{Litteraturliste}\label{litteraturliste}}
+
+Sætrevik, B. (2017). Replikasjonskrisen. \emph{Psykologtidsskriftet.}
+\url{https://psykologtidsskriftet.no/fagessay/2017/07/replikasjonskrisen}
+
+(\textbf{Bollen?})
+
+(\textbf{Leek?})
+
+(\textbf{Goodman?})
+
+(\textbf{Schmidt?})
+
+(\textbf{Gentleman?})
+
+Bollen K., Cacioppo, J. T., Dean H., Kaplan R. M., Krosnick J. A. \&
+Olds J. L. (2015). \emph{Social, Behavaioral, and Economic Sciences
+Perspectives on Robust and Reliable Science.} (Report of the
+Subcommittee on Replicability in Science Advisory Committee to the
+National Science Foundation Directorate for Social, Behavioral, and
+Economic Sciences).
+\url{https://www.nsf.gov/sbe/AC_Materials/SBE_Robust_and_Reliable_Research_Report.pdf}
+
+\hfill\break
+Leek, J. T., \& Peng R. D. (2015) Opinion: Reproducible research can
+still be wrong: Adopting a prevention approach. \emph{Proceedings of the
+National Academy of Sciences, 112}(6), 1645-1646
+
+Goodman, S. N., Fanelli, D. \& Ioannidis, J. P. A. (2016). What does
+research reproducibility mean? \emph{Science Translational Medicine,}
+8(341) 1-6.
+
+Schmidt, M. L. 2015. Reproducible Research Using RMarkdown and Git
+through Rstudio. \emph{RPubs by Rstudio.}
+\url{https://rpubs.com/marschmi/105639}
+
+Markowitz, F., Five selfish reasons to work reproducibly. \emph{Genome
+Biology, 16}(1) 274.
+\url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0850-7}
+
+Gentleman, R. \& Lang, D. T. Statistical analyses and reproducible
+research. \emph{Journal of Computational and Graphical Statistics,
+16}(1) 1-23.
+\url{https://www.tandfonline.com/doi/abs/10.1198/106186007X178663}
+
+(\textbf{Gentleman?})
 
 \end{document}
