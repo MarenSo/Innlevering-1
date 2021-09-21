@@ -1,5 +1,5 @@
 ---
-title: "R Notebook og reproduserbarhet"
+title: "Kan R Notebooks hjelpe med reproduserbarhet?"
 author: Innlevering 1 i Data Science 2021 - Maren Sognefest og Daniel Karstad
 Affiliation: HVL
 email: 152148@stud.hvl.no & xxxxxx@stud.hvl.no
