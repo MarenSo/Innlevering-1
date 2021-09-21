@@ -1,10 +1,10 @@
 ---
 title: "R Notebook"
 output:
+  pdf_document: default
+  html_notebook: default
   html_document:
     df_print: paged
-  html_notebook: default
-  pdf_document: default
   word_document: default
 ---
 
@@ -26,7 +26,7 @@ Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reprodu
 
 I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel
 
-\#\#\# Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
+### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
 
 Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.
 
@@ -41,7 +41,14 @@ Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det mennes
 
 ### Mulig løsning (teoretisk plan) "Compendium", "Dynamic document", "code chuncks" og "text chunck"
 
-I henhold til Gentleman og Lang (2007) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
+I henhold til Gentleman og Lang (Kilde) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (Kilde). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
+
+Før var det RMarkdown som oftest ble brukt. Problemet der var at man ofte ikke fikk all tekst, data og koding i samme dokument, man måtte dele det opp i ulike tabs.
+RNotebook er den nyeste utgivelsen fra Rstudio.  
+Rstudio er en Integrated Developer Environment (IDE) for alt som er R relatert. Rstudio er gratis, både å laste ned og gratis å bruke. Man kan laste det ned lokalt på PC/Desktop eller jobbe online/remote. Alle vanlige operativ system (OS) skal være kompatible til å bruke Rstudio, bla. Mac, Windows, Linux.
+Rstudio må benyttes sammen med andre program og/eller extensions, f.eks GitAhead, GitHub Desktop, kommandolinje/terminal, for å kunne oppnå reproduserbarhet og replikerbarhet. Dette oppnås f.eks med kodeversjonskontroll, f.eks Git koblet med Github. En RNotebook er et RMarkdown dokument som inneholder kode+tekst-blokker, som henter inn koder og data, utfører beregninger og analyser i henhold til formler/kode som legges inn i Rmd filen. RNotebook vil da kunne vise oss et ferdig, vanlig tekstdokument, som inneholder tekst og koder for relevant innhold, istedenfor å ha dette i flere forskjellige filer. Dette gjør at du visuelt kan vurdere dataene mens du utvikler RMarkdown dokumentet uten å måtte «knyte» sammen hele dokumentet for å se resultatet.
+
+Dette gjør at RNotebook kan brukes til å løse problemer knyttet til reproduserbarhet og replikerbarhet.
 
 ### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
 
@@ -88,6 +95,11 @@ I følge Florian Markowetz (20xx) er det følgende fem egoistiske hovedgrunner t
 Er økt reproduserbarhet noe som vil tvinge seg frem eller er dagens økte interesse bare et blaff? Kan reproduserbarhet ha relevans i sektorer utenfor akademia?
 
 ## Konklusjon
+
+Vi kan konkludere med at RNotebook bidrar til å gjøre det mulig å reprodusere, replikere og generalisere et studie, dette ved hjelp av en dynamisk RMD fil som inneholder både data, koder, fremgangsmåte, resultat og referanser, som igjen produserer docx-, tex- og html-versjoner.
+Noe som kan by på hodebry og problemer er alle programmene, extensions og Git som skal kommunisere sammen. Dette bidrar til et uoversiktlig bilde i starten, og for de som skal ta det i bruk krever det en bratt læringskurve.
+Det man kan trekke frem som positivt for en forsker som skal ta dette i bruk er at man kan referere til logikk og utregninger direkte i dokumentet. Det viser hva som ligger bak og er ikke bare en visuell presentasjon. Om forskere da inkluderer alt av data, koder, fremgangsmåte og full utredelse for hva som har blitt gjort så vil dette kunne brukes av alle til å forstå og kunne brukes i en senere studie, eller bare brukes som en referanse i en ny studie/forskningsrapporter.
+Man bør ha flere retningslinjer og krav til hva man bør inkludere når man publiserer nye studier/rapporter/undersøkelser, dette vil bidra til økt standard for fremtidig bruk.
 
 ## Litteraturliste
 
