@@ -26,25 +26,24 @@ Replikerbarhet/reproduserbarhet Det er enda ingen allmenn definisjon av "reprodu
 
 I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel
 
- ### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
+\#\#\# Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
 
 Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.
 
-Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det menneskelige aspektet i problemstillingen er ofte knyttet til det forskerne selv velger å dele av data, informasjon, koder, hypoteser, fremgangsmåte, programvare og så videre. Det har ikke vært praktisert, og standard retningslinjer for hva som bør ansees som god forskningsskikk og praksis er nødt å komme på plass for å møte kravene om tilfredsstillende reproduksjon og replikasjon.
-Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil som har oppstått underveis. Ved at man kan integrere og implementere programkode hos tidsskriftene, synlig eller usynlig, så skal det være mulig for andre forskere å reprodusere studien og gjøre den replikerbar. 
+Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det menneskelige aspektet i problemstillingen er ofte knyttet til det forskerne selv velger å dele av data, informasjon, koder, hypoteser, fremgangsmåte, programvare og så videre. Det har ikke vært praktisert, og standard retningslinjer for hva som bør ansees som god forskningsskikk og praksis er nødt å komme på plass for å møte kravene om tilfredsstillende reproduksjon og replikasjon. Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil som har oppstått underveis. Ved at man kan integrere og implementere programkode hos tidsskriftene, synlig eller usynlig, så skal det være mulig for andre forskere å reprodusere studien og gjøre den replikerbar.
 
 #### Oversikt over hva som bør sendes til tidsskriftene:
-* En kode til å  kune lese inn dataen med
-* En kode til å kalkulere og analysere dataen
-* En kode for å teste i henhold til hypoetese
-* En kode for å generere en rapport av resultatet
 
-### Mulig løsning (teoretisk plan) “Compendium”, “Dynamic document”, “code chuncks” og “text chunck”
+-   En kode til å kune lese inn dataen med
+-   En kode til å kalkulere og analysere dataen
+-   En kode for å teste i henhold til hypoetese
+-   En kode for å generere en rapport av resultatet
+
+### Mulig løsning (teoretisk plan) "Compendium", "Dynamic document", "code chuncks" og "text chunck"
 
 I henhold til Gentleman og Lang (2007) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.
 
 ### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?
-
 
 En mulig løsning på problemet kan være å publisere forskningsartikler i kompendier, som også inneholder datasett og koder som er brukt i forskningen. I et slikt kompendium kan det være dokumenter som kan oppdateres, også kjent som dynamiske dokumenter. I Rstudio kan man lage dynamiske dokumenter som blander tekst og R-kode. Et slikt dokument består av "text chunks" og "code chunks", altså bolker med både ren tekst og koding.
 
@@ -61,8 +60,6 @@ Dette dokumentet er skrevet i R studio, og det meste her er tekst, men som tidli
 ```{r}
 max(cars$dist)
 ```
-
-Eksempler på "Code chuncks" ("R Code Block") og "text chunck i R notebook.
 
 Har forskerne incentiver til å være "reproduserbare", eller må de tvinges?
 

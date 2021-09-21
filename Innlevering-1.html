@@ -182,27 +182,26 @@ pre code {
 <div id="problemets-omfang" class="section level3">
 <h3>Problemets omfang</h3>
 <p>I lys av replikasjonskrisen og det økte fokuset på replikasjon, har flere tidsskrifter begynt å publisere tilhørende datasett sammen med artiklene. ferdig av Daniel</p>
+<p>### Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?</p>
+<p>Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.</p>
+<p>Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det menneskelige aspektet i problemstillingen er ofte knyttet til det forskerne selv velger å dele av data, informasjon, koder, hypoteser, fremgangsmåte, programvare og så videre. Det har ikke vært praktisert, og standard retningslinjer for hva som bør ansees som god forskningsskikk og praksis er nødt å komme på plass for å møte kravene om tilfredsstillende reproduksjon og replikasjon. Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil som har oppstått underveis. Ved at man kan integrere og implementere programkode hos tidsskriftene, synlig eller usynlig, så skal det være mulig for andre forskere å reprodusere studien og gjøre den replikerbar.</p>
+<div id="oversikt-over-hva-som-bør-sendes-til-tidsskriftene" class="section level4">
+<h4>Oversikt over hva som bør sendes til tidsskriftene:</h4>
+<ul>
+<li>En kode til å kune lese inn dataen med</li>
+<li>En kode til å kalkulere og analysere dataen</li>
+<li>En kode for å teste i henhold til hypoetese</li>
+<li>En kode for å generere en rapport av resultatet</li>
+</ul>
+</div>
+</div>
+<div id="mulig-løsning-teoretisk-plan-compendium-dynamic-document-code-chuncks-og-text-chunck" class="section level3">
+<h3>Mulig løsning (teoretisk plan) “Compendium”, “Dynamic document”, “code chuncks” og “text chunck”</h3>
+<p>I henhold til Gentleman og Lang (2007) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.</p>
 </div>
 <div id="vil-dagens-løsning-med-arkiv-av-data-og-eventuell-programkode-hos-tidsskriftene-kunne-løse-problemet" class="section level3">
 <h3>Vil dagens løsning med arkiv av data og eventuell programkode hos tidsskriftene kunne løse problemet?</h3>
-</div>
-<p>Det er flere forskere o.l. som ikke ønsker å gi fra seg informasjon, dette gjelder data de besitter, koder, fremgangsmåte, dokumentasjon, resultat, feil, problemer de har møtt på, hypoteser osv. Dette gjør det svært vanskelig å reprodusere en tidligere studie, på et senere tidspunkt. Siden det samlet er flere problem, vil det naturligvis også være flere løsninger som må tas i bruk for at full reproduksjon skal være oppnåelig og man skal komme frem til lignende konklusjoner med ny data og ny sammensetning.</p>
-<p>Vi kan definere og skille mellom tekniske og menneskelige løsninger. Det menneskelige aspektet i problemstillingen er ofte knyttet til det forskerne selv velger å dele av data, informasjon, koder, hypoteser, fremgangsmåte, programvare og så videre. Det har ikke vært praktisert, og standard retningslinjer for hva som bør ansees som god forskningsskikk og praksis er nødt å komme på plass for å møte kravene om tilfredsstillende reproduksjon og replikasjon.
-Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil som har oppstått underveis. Ved at man kan integrere og implementere programkode hos tidsskriftene, synlig eller usynlig, så skal det være mulig for andre forskere å reprodusere studien og gjøre den replikerbar. </p>
-
-<p>Oversikt over hva som bør sendes til tidsskriftene:</p>
-<p>En kode til å  kune lese inn dataen med</p>
-<p>En kode til å kalkulere og analysere dataen</p>
-<p>En kode for å teste i henhold til hypoetese</p>
-<p>En kode for å generere en rapport av resultatet</p>
-<div id="mulig-løsning-teoretisk-plan-compendium-dynamic-document-code-chuncks-og-text-chunck" class="section level3">
-<h3>Mulig løsning (teoretisk plan) “Compendium”, “Dynamic document”, “code chuncks” og “text chunck”</h3>
-
-<p>I henhold til Gentleman og Lang (2007) er det nøye å integrere koder og beregninger som blir brukt i dataanalyser, metodebeskrivelser og simuleringer. Dette kan enkelt gjøres via et kompendium, hevdet av Gentleman og Lang (2007). Kompendium er en kortfattet oversikt over hovedinnholdet i f.eks. en studie gitt i dette tilfellet. Kompendiumet til da gi en oversikt over innholdet, slik som tekst, kode, data, metodikk, hypotese, problemstilling og så videre. Dette gjør at kompendiumet enkelt kan distribueres i ulike kanaler, enkelt kan håndteres og oppdateres i henhold.</p>
-<p>Compendium:</p>
-<p>Dynamic document:</p>
-<p>Code chuncks:</p>
-<p>Text chunck:</p>
+<p>En mulig løsning på problemet kan være å publisere forskningsartikler i kompendier, som også inneholder datasett og koder som er brukt i forskningen. I et slikt kompendium kan det være dokumenter som kan oppdateres, også kjent som dynamiske dokumenter. I Rstudio kan man lage dynamiske dokumenter som blander tekst og R-kode. Et slikt dokument består av “text chunks” og “code chunks”, altså bolker med både ren tekst og koding.</p>
 </div>
 <div id="mulig-løsning-r-notebooks" class="section level3">
 <h3>Mulig løsning R Notebooks</h3>
@@ -215,7 +214,6 @@ Det tekniske aspektet byr på mangel av data, koder, feil i programvare og feil 
 <p>Dette dokumentet er skrevet i R studio, og det meste her er tekst, men som tidligere nevnt er fordelen med R Notebook at man kan blande bolker med tekst, sammen med bolker av koder. Når man laster ned pakker i Rstudio får man med noen dataset, som man kan bruke til å øve seg. Et av disse datasettene heter “cars” og code chunksene under henter data fra dette settet. Den først koden viser hvor langt den lengste bilen i datasettet kjørte.</p>
 <pre class="r"><code>max(cars$dist)</code></pre>
 <pre><code>## [1] 120</code></pre>
-<p>Eksempler på “Code chuncks” (“R Code Block”) og &quot;text chunck i R notebook.</p>
 <p>Har forskerne incentiver til å være “reproduserbare”, eller må de tvinges?</p>
 <p>I følge Florian Markowetz (20xx) er det følgende fem egoistiske hovedgrunner til at forskerne selv burde ønske å publisere reproduserbar forskning:</p>
 <ol style="list-style-type: decimal">
