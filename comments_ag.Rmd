@@ -24,4 +24,6 @@ Jeg foreslår følgende endringer:
 I tillegg har jeg slettet grener som ikke lengre er i bruk.
 Det gjør det litt lettere å få oversikt over prosjektet.
 
-![Delete branches](comments_ag_insertimage_1.png "Delete branches")
+![Delete branches](comments_ag_insertimage_1.png "Delete branches") Her er en besvergelse som sletter grener som alt er merget oppe på remote (github)
+
+![Plot title.](comments_ag_insertimage_2.png)
